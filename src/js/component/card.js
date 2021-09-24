@@ -1,18 +1,22 @@
 import React from "react";
 
-export const Card = () => {
+export const Card = props => {
 	return (
-		<div className="card" style="width: 18rem;">
-			<img className="card-img-top" src="..." alt="Card image cap" />
-			<div className="card-body">
-				<h5 className="card-title">Card title</h5>
-				<p className="card-text">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-					do eiusmod tempor incididunt ut labore et dolore magna
-					aliqua.{" "}
-				</p>
+		<div className="card p-0 m-0 mb-4" style={{ width: "18rem" }}>
+			<img
+				className="card-img-top p-3"
+				src={props.card_image}
+				alt={props.card_image_alt}
+			/>
+			<div className="card-body p-0">
+				<h5 className="card-title text-center px-3 py-0">
+					{props.card_title}
+				</h5>
+				<p className="card-text text-center p-3">{props.card_text}</p>
+			</div>
+			<div className="card-footer text-center p-3">
 				<a href="#" className="btn btn-primary">
-					Go somewhere
+					Find out more!
 				</a>
 			</div>
 		</div>
